@@ -1,0 +1,77 @@
+*
+  box-sizing: border-box;
+
+html, body
+  height: 100%
+  background-color: background_color
+
+body
+  margin: 0
+
+// Sticky header and footer
+
+header
+  height: header_height
+  top: 0
+  position: fixed
+  width: 100%
+
+main
+  padding: header_height spacing spacing spacing
+  min-height: "calc(100vh - %s)" % (footer_height)
+
+footer
+  height: footer_height
+
+// Header styles
+
+header
+  .header-border
+    height: 6px;
+
+  .header-content
+    height: calc(100% - 6px)
+    margin: 0 spacing
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  h1
+    margin: 0
+    font-weight: 400
+
+    a 
+      color: header_color
+      letter-spacing: 2px
+
+      &:hover
+        color: darken(header_color, 20%)
+        text-decoration: none
+
+  ul
+    text-align: right
+    display: inline-block
+
+    li
+      display: inline-block
+      text-transform: uppercase
+      letter-spacing: 1px
+    
+    li + li
+      margin-left: spacing * 2
+
+
+// Footer styles
+
+footer
+  color: gradient_text
+  padding: spacing
+  
+  div + div
+    margin-top: 5px
+
+  a
+    color: gradient_anchor
+
+    &:hover
+      color: lighten(gradient_anchor, 20%)

@@ -1,0 +1,26 @@
+@import "_variables"
+
+@import "_partial/layout"
+
+*
+  font-family: font_sans_serif, sans-serif
+
+h1, h2, h3, h4
+  font-family: font_serif, serif
+  > *
+    font-family: font_serif, serif
+a
+  text-decoration: none
+  color: anchor_color
+  cursor: pointer
+
+a:hover
+  text-decoration: underline
+  color: darken(anchor_color, 20%)
+
+.gradient
+  background: gradient_light;
+  background: -webkit-linear-gradient(left top, gradient_dark, gradient_light);
+  background: -o-linear-gradient(bottom right, gradient_dark, gradient_light);
+  background: -moz-linear-gradient(bottom right, gradient_dark, gradient_light);
+  background: linear-gradient(to bottom right, gradient_dark, gradient_light);
